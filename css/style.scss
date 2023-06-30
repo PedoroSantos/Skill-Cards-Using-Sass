@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900");
+
+//darktheme
+$darkcolor: #011f26;
+$d_1color: #03a688;
+$d_2color: #026873;
+$d_3color: #025e73;
+$d_4color: #f2668b;
+//lightheme
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $darkcolor;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+  color: white;
+}
+@mixin flex($justify, $dir) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+  flex-direction: $dir;
+}
+.contents {
+  @include flex(space-between, row);
+  gap: 50px;
+}
+.container {
+  @include flex(center, column);
+  width: 100vw;
+  height: 100vh;
+
+  h1 {
+    margin-bottom: 20px;
+    font-weight: 900;
+    transition: .5s;
+    &:hover{
+      cursor: pointer;
+      letter-spacing: 1.5px;
+    }
+  }
+  p {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  hr {
+    width: 30%;
+    margin-bottom: 50px;
+    border: 1px solid $d_1color;
+  }
+}
+
+.card {
+  transform: translateY(50vh);
+  padding: 6em 2em;
+  transition: 0.4s;
+  border-radius: 30px;
+  box-shadow: 0px 0px 22px -3px rgba(2, 15, 13, 0.5);
+  figcaption {
+    font-size: 30px;
+    font-weight: 200;
+    text-align: center;
+  }
+  &:hover {
+   padding: 6.3em 2.3em;
+   transform: translateY(0vh);
+  }
+}
+
+.hover{
+  &::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 30px; 
+    transition: .3s;
+  }
+  &:hover::after{
+    box-shadow: inset 0px 0px 25px 1px rgba(255,255,255,.6);
+  }
+}
+#cardsass {
+  background-color: #cd669a;
+  img {
+    width: 200px;
+  }
+  &:hover{
+    box-shadow: 0px 0px 22px -7px #cd669a;
+  }
+ 
+}
+#cardjs {
+  background-color: #FFE000;
+  img {
+    width: 200px;
+  }
+  &:hover{
+    box-shadow: 0px 0px 22px -7px #FFE000;
+  }
+ 
+}
+
+#cardhtml {
+  background-color: #FF4C1C;
+  img {
+    width: 200px;
+  }
+  &:hover{
+    box-shadow: 0px 0px 22px -7px #FF4C1C;
+  }
+ 
+}
+#cardcss {
+  background-color: #009BD9;
+  img {
+    width: 200px;
+  }
+  &:hover{
+    box-shadow: 0px 0px 22px -7px #009BD9;
+  }
+}
+.hidden {
+  display: none;
+}

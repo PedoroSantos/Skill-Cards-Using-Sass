@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #011f26;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+  color: white;
+}
+
+.contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.container h1 {
+  margin-bottom: 20px;
+  font-weight: 900;
+  transition: 0.5s;
+}
+.container h1:hover {
+  cursor: pointer;
+  letter-spacing: 1.5px;
+}
+.container p {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container hr {
+  width: 30%;
+  margin-bottom: 50px;
+  border: 1px solid #03a688;
+}
+
+.card {
+  transform: translateY(50vh);
+  padding: 6em 2em;
+  transition: 0.4s;
+  border-radius: 30px;
+  box-shadow: 0px 0px 22px -3px rgba(2, 15, 13, 0.5);
+}
+.card figcaption {
+  font-size: 30px;
+  font-weight: 200;
+  text-align: center;
+}
+.card:hover {
+  padding: 6.3em 2.3em;
+  transform: translateY(0vh);
+}
+
+.hover::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.hover:hover::after {
+  box-shadow: inset 0px 0px 25px 1px rgba(255, 255, 255, 0.6);
+}
+
+#cardsass {
+  background-color: #cd669a;
+}
+#cardsass img {
+  width: 200px;
+}
+#cardsass:hover {
+  box-shadow: 0px 0px 22px -7px #cd669a;
+}
+
+#cardjs {
+  background-color: #FFE000;
+}
+#cardjs img {
+  width: 200px;
+}
+#cardjs:hover {
+  box-shadow: 0px 0px 22px -7px #FFE000;
+}
+
+#cardhtml {
+  background-color: #FF4C1C;
+}
+#cardhtml img {
+  width: 200px;
+}
+#cardhtml:hover {
+  box-shadow: 0px 0px 22px -7px #FF4C1C;
+}
+
+#cardcss {
+  background-color: #009BD9;
+}
+#cardcss img {
+  width: 200px;
+}
+#cardcss:hover {
+  box-shadow: 0px 0px 22px -7px #009BD9;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
